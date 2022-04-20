@@ -3,7 +3,7 @@
     <DischiProps
     v-for="(element, index) in dischiArray"
     :key ="index"
-    :image = "element.poster"
+    :poster = "element.poster"
     :title = "element.title"
     :author = "element.author"
     :year =  "element.year"
