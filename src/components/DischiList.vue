@@ -1,5 +1,13 @@
 <template>
-  <div>
+  <div class="row">
+    <DischiProps
+    v-for="(element, index) in dischiArray"
+    :key ="index"
+    :image = "element.poster"
+    :title = "element.title"
+    :author = "element.author"
+    :year =  "element.year"
+    />
     
   </div>
 </template>
@@ -8,11 +16,13 @@
 
 import axios from 'axios';
 
+import DischiProps from "./DischiProps.vue"
 
 
 export default {
   name: 'DischiList',
   components:{
+    DischiProps
       
   },
   data(){
@@ -23,8 +33,8 @@ export default {
   created(){
       axios.get("https://flynn.boolean.careers/exercises/api/array/music")
             .then( (res) => {
-              console.log(res);
-              
+              console.log(res.data);
+              this.dischiArray = res.data
             }
              )
   }

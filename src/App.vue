@@ -25,7 +25,4 @@ export default {
 
   @import "bootstrap/dist/css/bootstrap.min.css";
 
-#app {
-  
-}
 </style>
