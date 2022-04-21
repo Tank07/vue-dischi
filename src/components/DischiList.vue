@@ -5,12 +5,13 @@
 
   <div class="row row-cols-5 ">
     <DischiProps
-    v-for="(element, index) in dischiArray"
+    v-for="(element, index) in filtraggio"
     :key ="index"
     :poster = "element.poster"
     :title = "element.title"
     :author = "element.author"
     :year =  "element.year"
+    :genre = "element.genre"
     />
   </div>
 

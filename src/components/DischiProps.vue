@@ -5,6 +5,7 @@
       <h3 class="my-3">{{title}} </h3>
       <h6 class="my-3"> {{author}} </h6>
       <h6 class="text-muted my-3"> {{year}} </h6>
+      <h6 class="d-none my-3"> {{genre}} </h6>
     
   </div>
 </template>
@@ -18,6 +19,7 @@ export default {
       title: String,
       author: String,
       year: String,
+      genre: String
   }
 }
 </script>
