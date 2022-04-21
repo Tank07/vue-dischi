@@ -1,6 +1,13 @@
 <template>
   <div>
-    <img src="../assets/logo-small.svg" alt="">
+    <img src="../assets/spotify-logo.png" alt="">
+    <select name="genre" id="genre">
+      <option value="null">Null</option>
+      <option value="rock">Rock</option>
+      <option value="pop">Pop</option>
+      <option value="jazz">Jazz</option>
+      <option value="metal">Metal</option>
+  </select>
   </div>
 </template>
 
@@ -15,12 +22,13 @@ export default {
 
 div{
     background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 img{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  
     height: 60px;
     width: auto;
 }

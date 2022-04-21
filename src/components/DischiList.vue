@@ -1,6 +1,8 @@
 <template>
 <div class="container">
 
+   <RicercaGenre @funzioneRicerca="metodoSearch"/>
+
   <div class="row row-cols-5 ">
     <DischiProps
     v-for="(element, index) in dischiArray"
@@ -20,17 +22,21 @@
 import axios from 'axios';
 
 import DischiProps from "./DischiProps.vue"
+import RicercaGenre from "./RicercaGenre.vue"
 
 
 export default {
   name: 'DischiList',
   components:{
-    DischiProps
+    DischiProps,
+    RicercaGenre
+    
       
   },
   data(){
       return{
-          dischiArray:[]
+          dischiArray:[],
+          testoRicerca: ''
       }
   },
   created(){
@@ -40,6 +46,22 @@ export default {
               this.dischiArray = res.data.response
             }
              )
+  },
+  methods: {
+    metodoSearch( testo ){
+      console.log(testo)
+      this.testoRicerca = testo
+      console.log(this.testoRicerca)
+    },
+    filtraggio(){
+      if( this.testoRicerca === '' ){
+        return this.dischiArray
+      } else{
+        return this.dischiArray.filter( (element) => {
+          return element.genre.includes(this.testoRicerca)
+        } )
+      }
+    }
   }
 }
 
