@@ -25,4 +25,10 @@ export default {
 
   @import "bootstrap/dist/css/bootstrap.min.css";
 
+  div{
+    background-color: #1e2d3b;
+  }
+
+
+
 </style>

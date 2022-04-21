@@ -21,7 +21,7 @@ export default {
 <style scoped>
 
 div{
-    background-color: lightslategray;
+    background-color: #2e3a46;
     display: flex;
     align-items: center;
     justify-content: space-between;
