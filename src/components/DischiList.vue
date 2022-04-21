@@ -1,5 +1,7 @@
 <template>
-  <div class="row">
+<div class="container">
+
+  <div class="row row-cols-5 ">
     <DischiProps
     v-for="(element, index) in dischiArray"
     :key ="index"
@@ -8,8 +10,9 @@
     :author = "element.author"
     :year =  "element.year"
     />
-    
   </div>
+
+</div>
 </template>
 
 <script>

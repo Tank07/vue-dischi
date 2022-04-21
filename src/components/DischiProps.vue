@@ -1,7 +1,7 @@
 <template>
-  <div class="col-3 text-center my-5">
+  <div class=" text-center my-5">
       
-      <img :src="poster" alt="">
+      <img :src="poster" alt="" class="img-fluid">
       <h3 class="my-3">{{title}} </h3>
       <h6 class="my-3"> {{author}} </h6>
       <h6 class="text-muted my-3"> {{year}} </h6>
