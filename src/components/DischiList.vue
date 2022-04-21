@@ -5,7 +5,7 @@
 
   <div class="row row-cols-5 ">
     <DischiProps
-    v-for="(element, index) in filtraggio"
+    v-for="(element, index) in filtroGenere()"
     :key ="index"
     :poster = "element.poster"
     :title = "element.title"
@@ -37,7 +37,7 @@ export default {
   data(){
       return{
           dischiArray:[],
-          testoRicerca: ''
+          testoGenere: ''
       }
   },
   created(){
@@ -51,15 +51,15 @@ export default {
   methods: {
     metodoSearch( testo ){
       console.log(testo)
-      this.testoRicerca = testo
-      console.log(this.testoRicerca)
+      this.testoGenere = testo
+      console.log(this.testoGenere)
     },
-    filtraggio(){
-      if( this.testoRicerca === '' ){
+    filtroGenere(){
+      if( this.testoGenere === '' ){
         return this.dischiArray
       } else{
         return this.dischiArray.filter( (element) => {
-          return element.genre.includes(this.testoRicerca)
+          return element.genre.includes(this.testoGenere)
         } )
       }
     }
